@@ -1,0 +1,19 @@
+@import 'src/assets/variables.scss';
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-top {
+  width: $menu-width-wide;
+  @media (max-width: $breakpoint-tablet) {
+    width: $menu-width-collapsed;
+  }
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
