@@ -1,0 +1,15 @@
+@import 'src/assets/variables.scss';
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 18px;
+
+  a {
+    font-style: normal;
+    color: $primary-font-color;
+    text-decoration: none;
+  }
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IMenuItem } from 'src/app/interfaces/menu.interface';
 
 @Component({
   selector: 'app-menu-item',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-item.component.scss']
 })
 export class MenuItemComponent {
+  @Input() item: IMenuItem;
 
+  constructor() {
+    this.item = { icon: '', key: '', route: '' };
+  }
 }
