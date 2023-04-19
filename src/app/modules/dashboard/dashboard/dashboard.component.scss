@@ -1,45 +1,67 @@
+@import 'src/assets/variables.scss';
+
+.card {
+  background-color: $card-background-color;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
 .dashboard-container {
   padding-top: 25px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 
-  div {
+  .resin-row,
+  .wish-charts-row,
+  .abyss-wish-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 100px;
+    min-height: 150px;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 15px;
   }
 
   .resin-row {
-    background-color: darkblue;
-
     .today {
-      background-color: green;
       flex-grow: 1;
     }
     .resin {
-      background-color: purple;
       flex-grow: 2;
     }
   }
 
   .wish-charts-row {
-    background-color: darkcyan;
-
     .pie-charts-row {
+      display: flex;
+      flex-direction: row;
       flex-grow: 1;
+      gap: 15px;
+
+      .pie-chart-container {
+        flex-grow: 1;
+      }
     }
 
     .wish-spends-chart {
       flex-grow: 1;
+      display: flex;
       justify-content: flex-end;
     }
   }
 
   .abyss-wish-row {
-    background-color: darkgreen;
+    gap: 15px;
+    .abyss-container {
+      flex-grow: 1;
+    }
+
+    .wish-history-table {
+      flex-grow: 2;
+    }
   }
 }
