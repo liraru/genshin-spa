@@ -1,6 +1,4 @@
-<div class="menu-item">
-  <a [routerLink]="[item.route]">
-    <fa-icon [icon]="item.icon"></fa-icon>
-    {{ item.key | translate }}
-  </a>
-</div>
+<a class="menu-item" [routerLink]="[item.route]">
+  <fa-icon [icon]="item.icon"></fa-icon>
+  <div>{{ item.key | translate }}</div>
+</a>
