@@ -1,10 +1,45 @@
 .dashboard-container {
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
+  gap: 25px;
 
   div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-height: 100px;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .resin-row {
+    background-color: darkblue;
+
+    .today {
+      background-color: green;
+      flex-grow: 1;
+    }
+    .resin {
+      background-color: purple;
+      flex-grow: 2;
+    }
+  }
+
+  .wish-charts-row {
+    background-color: darkcyan;
+
+    .pie-charts-row {
+      flex-grow: 1;
+    }
+
+    .wish-spends-chart {
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  .abyss-wish-row {
+    background-color: darkgreen;
   }
 }
