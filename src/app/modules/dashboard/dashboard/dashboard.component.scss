@@ -10,7 +10,6 @@
 }
 
 .dashboard-container {
-  padding-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -50,7 +49,7 @@
     .wish-spends-chart {
       flex-grow: 1;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
     }
   }
 
