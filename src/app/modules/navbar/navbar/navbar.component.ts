@@ -13,7 +13,7 @@ import { NavigationStatusService } from 'src/app/services/navigation-status.serv
 export class NavbarComponent implements OnDestroy {
   private _pageNameSubs: Subscription;
   public currentPage: string;
-  public headerImg: string = IMAGES.COLLEI_LOGO;
+  public headerImg: string = IMAGES.COLLEI_SVG;
 
   constructor(private readonly _navigationStatusService: NavigationStatusService) {
     this.currentPage = (
