@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { MENU } from 'src/app/constants/menu.constant';
-import { SVG } from 'src/app/constants/svg.constant';
+import { IMAGES } from 'src/app/constants/images.constant';
 import { IMenuItem } from 'src/app/interfaces/menu.interface';
 import { NavigationStatusService } from 'src/app/services/navigation-status.service';
 
@@ -13,7 +13,7 @@ import { NavigationStatusService } from 'src/app/services/navigation-status.serv
 export class NavbarComponent implements OnDestroy {
   private _pageNameSubs: Subscription;
   public currentPage: string;
-  public headerImg: string = SVG.COLLEI;
+  public headerImg: string = IMAGES.COLLEI_LOGO;
 
   constructor(private readonly _navigationStatusService: NavigationStatusService) {
     this.currentPage = (
