@@ -4,13 +4,6 @@
   display: flex;
   flex-direction: row;
   height: calc(100vh - 111px);
-
-  :nth-child(3n) {
-    min-width: calc(100vw - 242px);
-    @media (max-width: $breakpoint-tablet) {
-      min-width: calc(100vw - 242px);
-    }
-  }
 }
 
 app-navbar {
