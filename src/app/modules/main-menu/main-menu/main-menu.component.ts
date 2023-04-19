@@ -9,4 +9,9 @@ import { IMenuItem } from 'src/app/interfaces/menu.interface';
 })
 export class MainMenuComponent {
   public menu: IMenuItem[] = MENU;
+  public current: string = location.pathname.substring(1, location.pathname.length);
+
+  public onItemChange(item: IMenuItem) {
+    this.current = item.route;
+  }
 }

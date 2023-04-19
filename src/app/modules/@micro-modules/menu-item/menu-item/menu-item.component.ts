@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MENU } from 'src/app/constants/menu.constant';
 import { IMenuItem } from 'src/app/interfaces/menu.interface';
+import { NavigationStatusService } from 'src/app/services/navigation-status.service';
 
 @Component({
   selector: 'app-menu-item',
@@ -10,10 +10,17 @@ import { IMenuItem } from 'src/app/interfaces/menu.interface';
 })
 export class MenuItemComponent {
   @Input() item: IMenuItem;
+  @Input() isActive: boolean = false;
+  @Output() onItemChange: EventEmitter<string> = new EventEmitter<string>();
 
   public icons = [];
 
-  constructor(iconLibrary: FaIconLibrary) {
-    this.item = { icon: faChartSimple, key: '', route: '' };
+  constructor(private readonly _navigationStatusService: NavigationStatusService) {
+    this.item = MENU[0];
+  }
+
+  public setRoute(item: IMenuItem) {
+    this._navigationStatusService.setActiveMenuItem(item);
+    this.onItemChange.emit(item.key);
   }
 }

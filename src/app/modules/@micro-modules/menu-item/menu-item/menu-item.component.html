@@ -1,4 +1,4 @@
-<a class="menu-item" [routerLink]="[item.route]">
+<a class="menu-item" [ngClass]="{ active: isActive }" (click)="setRoute(item)" [routerLink]="[item.route]">
   <fa-icon [icon]="item.icon"></fa-icon>
   <div>{{ item.key | translate }}</div>
 </a>

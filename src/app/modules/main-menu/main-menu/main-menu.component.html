@@ -1,1 +1,6 @@
-<app-menu-item *ngFor="let item of menu" [item]="item"></app-menu-item>
+<app-menu-item
+  *ngFor="let item of menu"
+  [item]="item"
+  [isActive]="current === item.route"
+  (onItemChange)="onItemChange(item)"
+></app-menu-item>
