@@ -6,7 +6,6 @@ import { IMenuItem } from 'src/app/interfaces/menu.interface';
   providedIn: 'root'
 })
 export class NavigationStatusService {
-  private _pageTitle: Subject<string> = new Subject<string>();
   private _activeMenuItem: Subject<IMenuItem> = new Subject<IMenuItem>();
 
   constructor() {}
