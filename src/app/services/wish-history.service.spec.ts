@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DashboardService } from './dashboard.service';
+import { WishHistoryService } from './wish-history.service';
 
 describe('DashboardService', () => {
-  let service: DashboardService;
+  let service: WishHistoryService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DashboardService);
+    service = TestBed.inject(WishHistoryService);
   });
 
   it('should be created', () => {

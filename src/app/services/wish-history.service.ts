@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class DashboardService {
+export class WishHistoryService {
   // TODO when no user kick out session and go back to login
   private _userId = (this._loginService.getLogedUser()?.id || 1).toString();
 
