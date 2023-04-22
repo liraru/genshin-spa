@@ -1,10 +1,13 @@
 {
   "TITLE": "Celestia",
   "MENU": {
+    "ABYSS_RECORDS": "Histórico de Abismo",
     "DASHBOARD": "Panel",
+    "OWNED_CHARACTERS": "Personajes",
     "RESIN_PLAN": "Plan de resina",
     "SAVINGS": "Ahorros",
     "TEAMS": "Equipos",
+    "TIMERS": "Temporizadores",
     "WEEKLY_PLANNING": "Plan semanal",
     "WISH_HISTORY": "Historial de tiradas"
   }

@@ -28,6 +28,20 @@ const routes: Routes = [
     path: ROUTES.WISH_HISTORY,
     loadChildren: () => import('./modules/wish-history/wish-history.module').then((m) => m.WishHistoryModule)
   },
+  {
+    path: ROUTES.ABYSS_RECORDS,
+    loadChildren: () =>
+      import('./modules/abyss-records/abyss-records.module').then((m) => m.AbyssRecordsModule)
+  },
+  {
+    path: ROUTES.OWNED_CHARACTERS,
+    loadChildren: () =>
+      import('./modules/owned-characters/owned-characters.module').then((m) => m.OwnedCharactersModule)
+  },
+  {
+    path: ROUTES.TIMERS,
+    loadChildren: () => import('./modules/timers/timers.module').then((m) => m.TimersModule)
+  },
   { path: '**', redirectTo: ROUTES.DASHBOARD, pathMatch: 'full' }
 ];
 
