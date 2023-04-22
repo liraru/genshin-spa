@@ -33,6 +33,6 @@ export class PullsModuleChartComponent {
   constructor(private readonly _translate: TranslateService) {}
 
   public onSelect(event: any) {
-    console.log(event);
+    // console.log(event);
   }
 }
