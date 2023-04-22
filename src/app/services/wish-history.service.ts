@@ -17,8 +17,8 @@ export class WishHistoryService {
 
   constructor(private readonly _http: HttpClient, private readonly _loginService: LoginService) {}
 
-  public getWishVolumeChartData(): Observable<IPullVolumeChart> {
-    return this._http.get<IPullVolumeChart>(
+  public getWishVolumeChartData(): Observable<IPullVolumeChart[]> {
+    return this._http.get<IPullVolumeChart[]>(
       `${environment.api}/${ENDPOINTS.WISH_HISTORY.GET_WISH_VOLUME_CHART.replace(':user', this._userId)}`
     );
   }
