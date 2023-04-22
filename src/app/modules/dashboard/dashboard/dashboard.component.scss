@@ -10,62 +10,6 @@
   flex-grow: 1;
 }
 
-.dashboard-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  .resin-row,
-  .wish-charts-row,
-  .abyss-wish-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 150px;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .resin-row {
-    .today {
-      flex-grow: 1;
-    }
-    .resin {
-      flex-grow: 2;
-    }
-  }
-
-  .wish-charts-row {
-    .pie-charts-row {
-      display: flex;
-      flex-direction: row;
-      flex-grow: 1;
-      gap: 15px;
-
-      .pie-chart-container {
-        flex-grow: 1;
-      }
-    }
-
-    .wish-spends-chart {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  .abyss-wish-row {
-    gap: 15px;
-    .abyss-container {
-      flex-grow: 1;
-    }
-
-    .wish-history-table {
-      flex-grow: 2;
-    }
-  }
-}
-
 .central-panel {
   display: flex;
   flex-direction: column;
