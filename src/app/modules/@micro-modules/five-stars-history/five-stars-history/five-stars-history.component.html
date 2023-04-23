@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Banner</th>
+    <th>Date</th>
+    <th>Pity</th>
+  </tr>
+  <tr *ngFor="let row of data">
+    <td>{{ row.name }}</td>
+    <td>{{ row.name }}</td>
+    <td>{{ row.date | shortened }}</td>
+    <td>{{ row.pity }}</td>
+  </tr>
+</table>
