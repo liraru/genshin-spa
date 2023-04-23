@@ -7,7 +7,7 @@
   </tr>
   <tr *ngFor="let row of data">
     <td>{{ row.name }}</td>
-    <td>{{ row.name }}</td>
+    <td>{{ row.banner || '' | translate }}</td>
     <td>{{ row.date | shortened }}</td>
     <td>{{ row.pity }}</td>
   </tr>

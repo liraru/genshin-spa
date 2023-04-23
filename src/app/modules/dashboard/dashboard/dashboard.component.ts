@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { StringDateHelper } from 'src/app/helpers/string-date.helper';
 import { IPullVolumeChart } from 'src/app/interfaces/wish-history/pull-volume-chart.interface';
 import { IPull, IRollHistory } from 'src/app/interfaces/wish-history/pull.interface';
 import { IAreaChartData } from 'src/app/modules/@micro-modules/pulls-volume-chart/area-chart-stacked-data.interface';
@@ -37,13 +36,24 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  private _parseWish(row: IPull, banner: string): IPull {
+    row.banner = banner;
+    return row;
+  }
+
   private _getWishHistory() {
     this.fiveStarsHistory = [];
     this._wishService.get5StarsHistory().subscribe((data: IRollHistory) => {
-      data.characters.forEach((row: IPull) => this.fiveStarsHistory.push(row));
-      data.weapons.forEach((row: IPull) => this.fiveStarsHistory.push(row));
-      data.standard.forEach((row: IPull) => this.fiveStarsHistory.push(row));
+      data.characters.forEach((row: IPull) =>
+        this.fiveStarsHistory.push(this._parseWish(row, 'COMMON.CHARACTERS'))
+      );
+      data.weapons.forEach((row: IPull) =>
+        this.fiveStarsHistory.push(this._parseWish(row, 'COMMON.WEAPONS'))
+      );
+      data.standard.forEach((row: IPull) =>
+        this.fiveStarsHistory.push(this._parseWish(row, 'COMMON.STANDARD'))
+      );
+      this.fiveStarsHistory = this.fiveStarsHistory.sort((a, b) => (a.date > b.date ? -1 : 1));
     });
-    this.fiveStarsHistory.sort((a, b) => (a.date > b.date ? -1 : 1));
   }
 }

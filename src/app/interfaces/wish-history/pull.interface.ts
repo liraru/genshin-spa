@@ -1,5 +1,6 @@
 export interface IPull {
   name: string;
+  banner?: string;
   pity: number;
   fiftyWon: boolean;
   date: string;
