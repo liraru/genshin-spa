@@ -12,7 +12,7 @@ import { IAreaChartData } from 'src/app/modules/@micro-modules/pulls-volume-char
 export class PullsModuleChartComponent {
   @Input() data: IAreaChartData[] = [];
   @Input() view: [number, number] = [700, 300];
-  legend = false;
+  legend = true;
   showLabels = true;
   animations = true;
   xAxis = true;
@@ -27,7 +27,7 @@ export class PullsModuleChartComponent {
     name: 'cool',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['gold', COLOURS.SECONDARY, COLOURS.TERTIARY]
+    domain: [COLOURS.TERTIARY, COLOURS.SECONDARY, COLOURS.GOLD]
   };
 
   constructor(private readonly _translate: TranslateService) {}

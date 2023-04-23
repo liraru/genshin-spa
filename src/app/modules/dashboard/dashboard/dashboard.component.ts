@@ -19,15 +19,16 @@ export class DashboardComponent implements OnInit {
 
   private _getWishVolumeChartData() {
     this._wishService.getWishVolumeChartData().subscribe((data: IPullVolumeChart[]) => {
-      this.wishVolumeChart = [
-        { name: '5', series: [] },
-        { name: '4', series: [] },
-        { name: '3', series: [] }
-      ];
+      this.wishVolumeChart = [];
       data.forEach((el: IPullVolumeChart) => {
-        this.wishVolumeChart.find((f) => f.name === '5')?.series.push({ name: el.date, value: el.wishes.r5 });
-        this.wishVolumeChart.find((f) => f.name === '4')?.series.push({ name: el.date, value: el.wishes.r4 });
-        this.wishVolumeChart.find((f) => f.name === '3')?.series.push({ name: el.date, value: el.wishes.r3 });
+        this.wishVolumeChart.push({
+          name: `${el.date.substring(5, 7)}/${el.date.substring(2, 4)}`,
+          series: [
+            { name: '3★', value: el.wishes.r3 },
+            { name: '4★', value: el.wishes.r4 },
+            { name: '5★', value: el.wishes.r5 }
+          ]
+        });
       });
     });
   }
