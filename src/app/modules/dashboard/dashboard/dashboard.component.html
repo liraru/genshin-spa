@@ -15,7 +15,9 @@
     <div class="column">
       <div class="card savings-card">
         <div>roscos pity</div>
-        <div>grafica tiradas</div>
+        <div>
+          <app-pulls-module-chart [data]="wishVolumeChart" [view]="[400, 250]"></app-pulls-module-chart>
+        </div>
       </div>
       <div class="card wish-history-card">history card</div>
     </div>

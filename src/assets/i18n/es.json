@@ -10,5 +10,9 @@
     "TIMERS": "Temporizadores",
     "WEEKLY_PLANNING": "Plan semanal",
     "WISH_HISTORY": "Historial de tiradas"
+  },
+  "CHARTS": {
+    "VOLUME": "Volumen",
+    "MONTH": "Mes"
   }
 }
