@@ -1,5 +1,10 @@
 {
   "TITLE": "Celestia",
+  "COMMON": {
+    "CHARACTERS": "Personajes",
+    "WEAPONS": "Armas",
+    "STANDARD": "Standard"
+  },
   "MENU": {
     "ABYSS_RECORDS": "Histórico de Abismo",
     "DASHBOARD": "Panel",

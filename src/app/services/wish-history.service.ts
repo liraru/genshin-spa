@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ENDPOINTS } from 'src/app/constants/endpoints.constant';
 import { IBannersPity } from 'src/app/interfaces/wish-history/banners-pity.interface';
-import { IFiveStarsHistory } from 'src/app/interfaces/wish-history/five-stars-history.interface';
 import { IPullVolumeChart } from 'src/app/interfaces/wish-history/pull-volume-chart.interface';
+import { IRollHistory } from 'src/app/interfaces/wish-history/pull.interface';
 import { LoginService } from 'src/app/services/login.service';
 
 @Injectable({
@@ -28,8 +28,8 @@ export class WishHistoryService {
     );
   }
 
-  public get5StarsHistory(): Observable<IFiveStarsHistory> {
-    return this._http.get<IFiveStarsHistory>(
+  public get5StarsHistory(): Observable<IRollHistory> {
+    return this._http.get<IRollHistory>(
       `/${ENDPOINTS.WISH_HISTORY.GET_5_STARS_HISTORY.replace(':user', this._userId)}`
     );
   }

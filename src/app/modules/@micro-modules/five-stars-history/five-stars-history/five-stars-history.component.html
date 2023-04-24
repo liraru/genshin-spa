@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Banner</th>
+    <th>Date</th>
+    <th>Pity</th>
+  </tr>
+  <tr *ngFor="let row of data" [ngClass]="{'lost': !row.fiftyWon}">
+    <td>{{ row.name }}</td>
+    <td>{{ row.banner || '' | translate }}</td>
+    <td>{{ row.date | shortened }}</td>
+    <td class="pity">{{ row.pity }}</td>
+  </tr>
+</table>
