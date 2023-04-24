@@ -6,6 +6,12 @@
   height: calc(100vh - 111px);
 }
 
+.inner-container {
+  max-height: calc(100vh - 111px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 app-navbar {
   height: 75px;
   display: flex;
